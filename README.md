@@ -3,7 +3,7 @@
 
 ## Requisitos
 
-- PHP (Con las extensiones de SQLite activadas)
+- PHP (Con las extensiones de SQLite y fileinfo activadas)
 - Composer
 
 ## Instalación
