@@ -16,7 +16,17 @@
 
 > composer install
 
-3. Ejecutar el servidor web:
+3. (Opcional, muy recomendable) Seedear la base de datos:
+
+> php artisan db:seed
+
+Usuarios creados por el seeding:
+| Email            | Contrasena | Tipo  |
+|------------------|------------|-------|
+| admin@admin.com  | admin      | admin |
+| pepe@hotmail.com | pepepepe   | guest |
+
+4. Ejecutar el servidor web:
 
 > composer run dev
 
