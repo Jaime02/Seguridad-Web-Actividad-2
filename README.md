@@ -36,7 +36,7 @@ Accept: application/json
 
 Deberías recibir una respuesta 200 y el siguiente JSON:
 
-```json
+```jsonc
 {
     "token": "<token>",
     "user": {
@@ -56,7 +56,7 @@ Accept: application/json
 ```
 
 Deberías recibir una respuesta 200 y el siguiente JSON:
-```json
+```jsonc
 {
     "message": "Token is valid",
     "user": {
