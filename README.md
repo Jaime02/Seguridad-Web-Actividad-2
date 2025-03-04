@@ -42,7 +42,7 @@ Deberías recibir una respuesta 200 y el siguiente JSON:
     "user": {
         "id": 1,
         "name": "Pedro Sanxes",
-        ... otros datos del usuario ...
+        // ... otros datos ...
     }
 }
 ```
@@ -56,13 +56,13 @@ Accept: application/json
 ```
 
 Deberías recibir una respuesta 200 y el siguiente JSON:
-```
+```json
 {
     "message": "Token is valid",
     "user": {
         "id": 1,
         "name": "Pedro Sanxes",
-        ... otros datos ...
+        // ... otros datos ...
     }
 }
 ```
