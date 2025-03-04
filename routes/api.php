@@ -2,12 +2,17 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\AuthController;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
+// Public routes
+Route::post('/login', [AuthController::class, 'login']);
 
-Route::post('/tokens/create', function (Request $request) {
-    $token = $request->user()->createToken($request->token_name);
-    return ['token' => $token->plainTextToken];
+// Protected routes
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/checktoken', function (Request $request) {
+        return response()->json([
+            'message' => 'Token is valid',
+            'user' => $request->user(),
+        ]);
+    });
 });

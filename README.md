@@ -21,3 +21,48 @@
 > composer run dev
 
 Listo! La web debería estar funcionando en `127.0.0.1:8000`
+
+
+## Acceso mediante Laravel Sanctum (Tokens de la API)
+Es recomendable usar la coleccion de Postman (`Autenticacion.postman_collection.json`) o CURL si te gusta lo duro
+
+Version CURL:
+1. Hacer login. Enviar una peticion POST a http://127.0.0.1:8000/api/login
+Incluir el email y contraseña en el body
+Incluir el header:
+```
+Accept: application/json
+```
+
+Deberías recibir una respuesta 200 y el siguiente JSON:
+
+```json
+{
+    "token": "<token>",
+    "user": {
+        "id": 1,
+        "name": "Pedro Sanxes",
+        ... otros datos del usuario ...
+    }
+}
+```
+
+2. Usar el token recibido para acceder a rutas protegidas
+Enviar peticion GET a http://127.0.0.1:8000/api/checktoken
+Incluir los siguientes headers:
+```
+Authorization: Bearer <PEGAR EL TOKEN AQUÍ>
+Accept: application/json
+```
+
+Deberías recibir una respuesta 200 y el siguiente JSON:
+```
+{
+    "message": "Token is valid",
+    "user": {
+        "id": 1,
+        "name": "Pedro Sanxes",
+        ... otros datos ...
+    }
+}
+```
