@@ -8,7 +8,7 @@ use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Crea los usuarios de prueba
      */
     public function run(): void
     {
@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'Pedro Sanxes',
             'email' => 'admin@admin.com',
             'password' => bcrypt('admin'),
+            'description' => 'Soy el que manda neng',
+            'phone' => '1234567890',
         ]);
     }
 }
