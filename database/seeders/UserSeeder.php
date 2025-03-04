@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => bcrypt('admin'),
             'description' => 'Soy el que manda neng',
-            'phone' => '1234567890',
+            'phone' => '+34123456789',
             'role' => 'admin',
         ]);
 
@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
             'email' => 'pepe@hotmail.com',
             'password' => bcrypt('pepepepe'),
             'description' => 'Soy un soldado raso',
-            'phone' => '6699669969',
+            'phone' => '+34669966996',
         ]);
     }
 }
