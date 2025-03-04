@@ -12,11 +12,13 @@
 
 > git clone https://github.com/Jaime02/Seguridad-Web-Actividad-2
 
-2. Instalar dependencias:
+2. Copiar el archivo `.env.example` para crear un archivo `.env`
+
+3. Instalar dependencias:
 
 > composer install
 
-3. (Opcional, muy recomendable) Seedear la base de datos:
+4. (Opcional, muy recomendable) Seedear la base de datos:
 
 > php artisan db:seed
 
@@ -26,7 +28,7 @@ Usuarios creados por el seeding:
 | admin@admin.com  | admin      | admin |
 | pepe@hotmail.com | pepepepe   | guest |
 
-4. Ejecutar el servidor web:
+5. Ejecutar el servidor web:
 
 > composer run dev
 
